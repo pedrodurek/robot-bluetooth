@@ -1,0 +1,39 @@
+  <ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismissModal()">
+        Cancelar
+      </button>
+    </ion-buttons>
+    <ion-title>Alterar Comandos</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="save()">
+        Salvar
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="bg-gray">
+  <ion-list class="mg-input">
+    <ion-item>
+      <ion-icon color="primary" name="ios-arrow-dropup-circle" item-left></ion-icon>
+      <ion-input [value]="config.top" (change)="setConfigTop($event.target.value)" placeholder="Comando"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="primary" name="ios-arrow-dropleft-circle" item-left></ion-icon>
+      <ion-input [value]="config.left" (change)="setConfigLeft($event.target.value)" placeholder="Comando"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="primary" name="ios-arrow-dropright-circle" item-left></ion-icon>
+      <ion-input [value]="config.right" (change)="setConfigRight($event.target.value)" placeholder="Comando"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="primary" name="ios-arrow-dropdown-circle" item-left></ion-icon>
+      <ion-input [value]="config.bottom" (change)="setConfigBottom($event.target.value)" placeholder="Comando"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="primary" name="ios-close-circle" item-left></ion-icon>
+      <ion-input [value]="config.stop" (change)="setConfigStop($event.target.value)" placeholder="Comando"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>

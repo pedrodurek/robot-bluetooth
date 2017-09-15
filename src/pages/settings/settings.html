@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Configuração</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="refresh()">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>AJUSTES</ion-list-header>
+      <ion-item>
+        <ion-label color="dark"> Bluetooth BLE</ion-label>
+        <ion-toggle [(ngModel)]="isBLE" color="secondary"></ion-toggle>
+      </ion-item>
+    <ion-list-header>DISPOSITIVOS</ion-list-header>
+    <ion-item *ngFor="let device of devices">
+     <ion-icon color="primary" name="bluetooth" item-left></ion-icon>
+      <h2>{{device.name}}</h2>
+      <p>{{device.id}}</p>
+      <button *ngIf="!device.enabled" ion-button color="secondary" item-right (click)="connect(device)">Conectar</button>
+      <button *ngIf="device.enabled" ion-button color="danger" item-right (click)="disconnect(device)">Desconectar</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

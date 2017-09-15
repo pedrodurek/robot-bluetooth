@@ -1,0 +1,63 @@
+.center {
+	padding-top: 40px;
+	margin: 0 auto;
+	width: 290px;
+	text-align: center;
+}
+
+.center button {
+	font-size: 43px;
+	background-color: #387ef5;
+	border-radius: 50%;
+	color: white;
+}
+
+.scroll-content {
+	overflow-y: hidden;
+}
+
+.center button:active {
+	background-color: #3474e1;
+}
+
+.btn-left {
+	margin-top: 30px;
+}
+
+.btn-up {
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+.btn-down {
+	width: 100%;
+	padding-top: 20px;
+}
+
+.btn-down > button,
+.btn-up > button {
+	padding: 17px 26px;
+}
+
+.btn-left-right > button {
+	padding: 16px 30px;
+}
+
+.btn-left-right > button:first-child {
+	margin-right: 60px;
+}
+
+.btn-left-right > button:last-child {
+	margin-left: 60px;
+}
+
+.bg-gray {
+	background-color: #F0F0F0;
+}
+.pd-t-25 {
+	padding-top: 25px;
+}
+.mg-input  {
+	margin-top: 32px;
+}
+

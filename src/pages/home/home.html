@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Comandos</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="edit()">
+        <ion-icon name="ios-build-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <div class="center">
+    <div class="btn-up">
+    	<button class="dir" (tap)="sendData(config.top)" (press)="sendData(config.top)">
+    		<ion-icon name="ios-arrow-up"></ion-icon>
+    	</button>
+    </div>
+    <div class="btn-left-right">
+      <button class="dir" (tap)="sendData(config.left)" (press)="sendData(config.left)">
+    		<ion-icon name="ios-arrow-back"></ion-icon>
+		  </button>
+    	<button class="dir" (tap)="sendData(config.right)" (press)="sendData(config.right)">
+    		<ion-icon name="ios-arrow-forward"></ion-icon>
+    	</button>
+    </div>
+    <div class="btn-down">
+      <button class="dir" (tap)="sendData(config.bottom)" (press)="sendData(config.bottom)">
+    		<ion-icon name="ios-arrow-down"></ion-icon>
+    	</button>
+    </div>
+  </div>
+  <ion-fab bottom right>
+    <button ion-fab color="red">
+      <ion-icon name="md-add"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <button ion-fab color="gray" (click)="enableRecord()">
+        <ion-icon *ngIf="!isRecording" name="play"></ion-icon>
+        <ion-icon *ngIf="isRecording" name="pause"></ion-icon>
+      </button>
+    </ion-fab-list>
+    <ion-fab-list side="left">
+      <button ion-fab color="gray" (click)="sendRecorded(false, 0)">
+        <ion-icon name="redo"></ion-icon>
+      </button>
+      <button ion-fab color="gray" (click)="sendRecorded(true, 0)">
+        <ion-icon name="undo"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
